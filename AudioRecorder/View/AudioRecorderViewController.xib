@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AudioRecorderViewController" customModule="AudioRecorder" customModuleProvider="target">
+            <connections>
+                <outlet property="playButton" destination="tsi-14-Jf7" id="SHg-pz-ljR"/>
+                <outlet property="tableView" destination="9od-R1-Zc9" id="au2-Hs-SAm"/>
+                <outlet property="timeLabel" destination="8lH-fv-k7Q" id="Tbd-ai-zq6"/>
+                <outlet property="view" destination="C8c-KX-9Oi" id="Eip-5I-WfN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="C8c-KX-9Oi">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9od-R1-Zc9">
+                    <rect key="frame" x="10" y="230" width="394" height="656"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oY4-uh-2Xh">
+                    <rect key="frame" x="171" y="148" width="72" height="72"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsi-14-Jf7">
+                            <rect key="frame" x="21" y="21" width="30" height="30"/>
+                            <color key="backgroundColor" red="0.99607843139999996" green="0.14901960780000001" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="playstopButton:" destination="-1" eventType="touchUpInside" id="v2T-cf-fqa"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="Background"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="72" id="7Hz-wt-NOg"/>
+                        <constraint firstItem="tsi-14-Jf7" firstAttribute="centerX" secondItem="oY4-uh-2Xh" secondAttribute="centerX" id="BSf-rh-2Xm"/>
+                        <constraint firstAttribute="width" constant="72" id="bbI-YZ-7gT"/>
+                        <constraint firstAttribute="width" secondItem="oY4-uh-2Xh" secondAttribute="height" multiplier="1:1" id="lbF-cX-RGN"/>
+                        <constraint firstItem="tsi-14-Jf7" firstAttribute="centerY" secondItem="oY4-uh-2Xh" secondAttribute="centerY" id="pSQ-iY-SU0"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="36"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="black-white"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lH-fv-k7Q">
+                    <rect key="frame" x="299.5" y="166" width="78.5" height="36"/>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                    <color key="textColor" systemColor="systemBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audio Recorder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMK-6O-Ia1">
+                    <rect key="frame" x="144" y="77" width="126" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="XM1-ko-qUu"/>
+            <color key="backgroundColor" name="Background"/>
+            <constraints>
+                <constraint firstItem="PMK-6O-Ia1" firstAttribute="centerX" secondItem="XM1-ko-qUu" secondAttribute="centerX" id="7i5-QU-8df"/>
+                <constraint firstItem="9od-R1-Zc9" firstAttribute="trailing" secondItem="XM1-ko-qUu" secondAttribute="trailing" constant="-10" id="Agt-SG-eIA"/>
+                <constraint firstItem="XM1-ko-qUu" firstAttribute="trailing" secondItem="8lH-fv-k7Q" secondAttribute="trailing" constant="36" id="EPe-sJ-nVu"/>
+                <constraint firstItem="9od-R1-Zc9" firstAttribute="top" secondItem="oY4-uh-2Xh" secondAttribute="bottom" constant="10" id="HN8-ZI-kk5"/>
+                <constraint firstAttribute="bottom" secondItem="9od-R1-Zc9" secondAttribute="bottom" constant="10" id="NLG-GS-dKx"/>
+                <constraint firstItem="oY4-uh-2Xh" firstAttribute="top" secondItem="PMK-6O-Ia1" secondAttribute="bottom" constant="50" id="QvT-Ny-0Qu"/>
+                <constraint firstItem="8lH-fv-k7Q" firstAttribute="centerY" secondItem="tsi-14-Jf7" secondAttribute="centerY" id="WzT-Re-I0b"/>
+                <constraint firstItem="9od-R1-Zc9" firstAttribute="leading" secondItem="XM1-ko-qUu" secondAttribute="leading" constant="10" id="X61-u4-0fI"/>
+                <constraint firstItem="oY4-uh-2Xh" firstAttribute="centerX" secondItem="C8c-KX-9Oi" secondAttribute="centerX" id="fNI-k5-rvx"/>
+                <constraint firstItem="PMK-6O-Ia1" firstAttribute="top" secondItem="XM1-ko-qUu" secondAttribute="top" constant="33" id="weu-NA-2Ao"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="94"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.67799997329711914" green="0.85100001096725464" blue="0.87800002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="black-white">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
